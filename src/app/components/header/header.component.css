@@ -7,6 +7,7 @@
   left: 0%;
   right: 0.03%;
   top: 0%;
+  z-index: 1;
 }
 .__logo-container {
   display: flex;
@@ -77,11 +78,11 @@
   cursor: pointer;
 }
 .__logout-btn {
-    visibility: hidden;
+  visibility: visible;
   position: absolute;
   right: 64px;
   top: 66px;
-  z-index: 1;
+  z-index: 2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,6 +93,7 @@
   border: 1px solid #32bc9b;
   box-sizing: border-box;
   border-radius: 10px;
+  position: fixed;
 }
 .btn-container {
   display: flex;

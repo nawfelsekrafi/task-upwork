@@ -1,1 +1,54 @@
-<p>main works!</p>
+<div class="main-header">
+    <div class="first-container">
+        <div class="retour-btn">
+            <img src="assets/back.svg" alt="" class="back-icon">
+            <p class="retour">Retour</p>
+        </div>
+        <div class="mes-modeles">
+            <img src="assets/task-square.svg" alt="" class="mes-modeles-icon">
+            <p class="mes-modeles-title">Mes modèles</p>
+        </div>
+    </div>
+   
+    <div class="ajouter-un-modele-btn">
+        <img class="aj-un-model-1" src="assets/Vector.svg">
+        <p class="aj-un-model-2"></p>
+        <p class="aj-un-model-3">Ajouter un modèle</p>
+    </div>
+</div>
+
+<div class="main-container">
+    <div class="pre-evaluation">
+        <img src="assets/note-2.svg" alt="" class="pre-evaluation-icon">
+        <p class="pre-evaluation-title">Pré-Évaluation</p>
+    </div>
+    <div class="main-content">
+        <div class="list">
+            <input type="text" class="search" placeholder="Recherche des modeles…">
+            <div class="list-header">
+                <input type="checkbox" checked="true" disabled name="" id="">
+                <p class="id">ID</p>
+                <p class="model-name">Nom du modèle</p>
+            </div>
+            <div class="list-container">
+                <div class="item" *ngFor="let e of modeles">
+                    <input type="checkbox" name="" id="">
+                    <p class="id-item">{{e.id}}</p>
+                    <div>
+                        <p class="name-item">{{e.title}}</p>
+                        <p class="date">{{e.date}}</p>
+                    </div>
+                   <div class="tools" >
+
+                       <img src="" alt="" class="eye">
+                       <img src="" alt="" class="edit">
+                       <img src="" alt="" class="button-on-off">
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="pdf-viwer">
+            need to be complete
+        </div>
+    </div>
+</div>
