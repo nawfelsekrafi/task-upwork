@@ -1,0 +1,113 @@
+.__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  position: fixed;
+  left: 0%;
+  right: 0.03%;
+  top: 0%;
+}
+.__logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hr {
+  color: rgba(0, 0, 0, 0.07);
+  font-size: 55px;
+  margin: 0px 0px 14px 15px;
+}
+.__company-logo {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24.1px;
+  line-height: 36px;
+  text-align: center;
+  color: #000000;
+}
+.__user-profile {
+  display: flex;
+  align-items: center;
+  margin-right: 74px;
+  position: relative;
+}
+.__logo {
+  margin-top: -10px;
+  margin-left: 10px;
+}
+.__picture {
+  margin-right: 15px;
+  border-radius: 10px;
+}
+.__name {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height */
+
+  text-transform: capitalize;
+  color: #000000;
+}
+.__id {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 15px;
+  /* identical to box height */
+
+  text-transform: capitalize;
+
+  color: #6e6e6e;
+  margin-top: -10px;
+  margin-bottom: 19px;
+}
+.__drop-down-btn {
+  margin-left: 15px;
+  padding: 5px 5px 4px 4px;
+  font-size: 40px;
+  background-color: #c0faec;
+  border-radius: 54%;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.__logout-btn {
+    visibility: hidden;
+  position: absolute;
+  right: 64px;
+  top: 66px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 20px;
+  height: 48px;
+  width: 164px;
+  background: #ffffff;
+  border: 1px solid #32bc9b;
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 145px;
+  height: 28px;
+  background: #c0faec;
+  border-radius: 8px;
+}
+.__logout {
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 25px;
+  color: #32bc9b;
+  margin-left: 5px;
+}
