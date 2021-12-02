@@ -31,19 +31,19 @@
                 <p class="name">Nom du modèle</p>
             </div>
             <div class="list-container">
-                <div class="item" *ngFor="let e of modeles">
-                    <input type="checkbox" name="" id="" class="checkbox-btn">
+                <div class="item" *ngFor="let e of modeles; let last = last" >
+                    <input type="checkbox" id="" class="checkbox-btn">
                     <p class="id id-item">{{e.id}}</p>
-                    <div>
+                    <div class="item-name-date">
                         <p class="name name-item">{{e.title}}</p>
                         <p class="date">{{e.date}}</p>
                     </div>
                    <div class="tools" >
-
-                       <img src="" alt="" class="eye">
-                       <img src="" alt="" class="edit">
-                       <img src="" alt="" class="button-on-off">
+                       <img src="assets/eye.svg" alt="" class="eye">
+                       <img src="assets/edit.svg" alt="" class="edit">
+                       <img src="assets/toggle.svg" alt="" class="button-on-off">
                    </div>
+                   <span *ngIf="last">{{onChangeChecked()}}</span>
                 </div>
             </div>
         </div>

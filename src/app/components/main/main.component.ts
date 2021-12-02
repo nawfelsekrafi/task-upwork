@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,  OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-main',
@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class MainComponent implements OnInit {
 
   constructor() { }
+  
   modeles: any[] = [
     { 
       isActive: true,
@@ -75,6 +76,17 @@ export class MainComponent implements OnInit {
     
   ] ;
   ngOnInit(): void {
+  }
+
+  onChangeChecked(){
+    let btnList = document.querySelectorAll('.checkbox-btn');
+    console.log(btnList)
+   btnList.forEach(x => {
+     
+      x.addEventListener('change',function(){
+        //let itemDiv = document.querySelector.
+      });
+    });
   }
 
 }

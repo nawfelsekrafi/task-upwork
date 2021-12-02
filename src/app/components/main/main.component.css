@@ -147,7 +147,7 @@
   width: 50%;
 }
 .list-container {
-  width: 100%;
+  width: 103%;
   height: 390px;
   overflow-y: scroll;
   scroll-behavior: smooth;
@@ -208,7 +208,11 @@ input:focus {
 .checkbox-btn {
   margin-left: 33px;
   margin-right: 32px;
-  background-color: aqua;
+  outline: none !important;
+  border: 1px solid #32BC9B;
+}
+input [type="chechbox"]:checked .list-header{
+  display: none;
 }
 .id {
   margin-right: 39px;
@@ -228,6 +232,7 @@ input:focus {
   box-sizing: border-box;
   border-radius: 8px;
   margin-bottom: 17px;
+  position: relative
 }
 .name {
   font-style: normal;
@@ -235,6 +240,9 @@ input:focus {
   font-size: 14px;
   line-height: 21px;
   color: #6f7484;
+}
+.item-name-date {
+  margin-left: 9px;
 }
 .name-item {
   font-style: normal;
@@ -253,4 +261,21 @@ input:focus {
   text-align: center;
   text-transform: capitalize;
   color: #c7c7c7;
+  margin-left: -9px;
+}
+.tools {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: -5px;
+}
+.tools > img {
+  margin-right: 17px;
+  cursor: pointer;
+}
+.checked {
+  background-color: #F1F8F6;
+}
+.disabled{
+  background-color:#F5F5F5;
 }

@@ -21,7 +21,6 @@ export class SidebarComponent implements OnInit {
   tab.forEach(x => {
       x.addEventListener('mouseover', function(){
         (<HTMLElement>x).classList.add('titleIsActive');
-       /* sidebar.style.width = '260px';*/
         title.forEach(x => {
          (<HTMLElement>x).style.visibility = 'visible'
         });
@@ -47,11 +46,6 @@ export class SidebarComponent implements OnInit {
        });
    
     })
-    
-
-  
-   
-     // title.style.visibility = 'hidden';
    
   }
 
