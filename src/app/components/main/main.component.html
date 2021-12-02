@@ -11,7 +11,7 @@
     </div>
    
     <div class="ajouter-un-modele-btn">
-        <img class="aj-un-model-1" src="assets/Vector.svg">
+        <img class="aj-un-model-1" src="assets/add.svg">
         <p class="aj-un-model-2"></p>
         <p class="aj-un-model-3">Ajouter un modèle</p>
     </div>
@@ -26,16 +26,16 @@
         <div class="list">
             <input type="text" class="search" placeholder="Recherche des modeles…">
             <div class="list-header">
-                <input type="checkbox" checked="true" disabled name="" id="">
+                <input type="checkbox" checked="true" disabled name="" id="" class="checkbox-btn">
                 <p class="id">ID</p>
-                <p class="model-name">Nom du modèle</p>
+                <p class="name">Nom du modèle</p>
             </div>
             <div class="list-container">
                 <div class="item" *ngFor="let e of modeles">
-                    <input type="checkbox" name="" id="">
-                    <p class="id-item">{{e.id}}</p>
+                    <input type="checkbox" name="" id="" class="checkbox-btn">
+                    <p class="id id-item">{{e.id}}</p>
                     <div>
-                        <p class="name-item">{{e.title}}</p>
+                        <p class="name name-item">{{e.title}}</p>
                         <p class="date">{{e.date}}</p>
                     </div>
                    <div class="tools" >

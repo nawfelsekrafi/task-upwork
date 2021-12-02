@@ -1,5 +1,14 @@
+.app-header {
+    position: absolute;
+    z-index:2;
+}
 .app-main {
     margin-top: 63px;
     display: flex;
     flex-direction: column;
+    z-index:0;
+}
+.app-sidebar{
+    position: absolute;
+    z-index:1;
 }

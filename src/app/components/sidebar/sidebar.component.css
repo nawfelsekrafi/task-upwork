@@ -1,0 +1,92 @@
+.__sidebar {
+  margin-top: -35px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 1;
+  background: #ffffff;
+  width: 71px;
+  overflow: hidden;
+}
+.__sidebar > div {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  padding: 0px;
+  margin-left: 12px;
+  width: 228px;
+  height: 45px;
+  cursor: pointer;
+}
+svg {
+  margin-right: 21px;
+  margin-left: 10px;
+  cursor: pointer;
+  fill: "#020A26";
+}
+.image {
+  margin-left: 0px;
+  margin-right: 11px;
+}
+.title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 25px;
+  color: #010925;
+  visibility: hidden;
+  cursor: pointer;
+  transition: color 0 infinite;
+}
+.couts {
+  margin-right: 29px;
+}
+.bpf-img {
+  margin-right: 26px;
+}
+.compt-img {
+  margin-right: 23px;
+}
+.relances-img {
+  margin-right: 31px;
+}
+.deconnexion-img {
+  margin-right: 29px;
+}
+.parametre-img {
+  margin-right: 23px;
+}
+
+.tableau-de-bord {
+  margin-top: 8px;
+}
+.titleIsActive {
+  background: #edf3f2;
+  border-radius: 10px;
+}
+.titleIsActive > .title {
+  color: #32bc9b;
+}
+.titleIsActive svg path {
+  fill: #32bc9b;
+}
+.titleIsActive .formation path {
+  fill:none ;
+  stroke:#32bc9b  ;
+}
+.titleIsFocused {
+  width: 45px !important;
+  background: #edf3f2;
+  border-radius: 10px;
+}
+.titleIsFocused svg path {
+  fill: #32bc9b;
+}
+.titleIsFocused .formation path {
+  fill:none ;
+  stroke:#32bc9b  ;
+}
+.titleIsFocused > .title {
+  color: #32bc9b;
+}
+
