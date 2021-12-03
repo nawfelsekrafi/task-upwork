@@ -76,18 +76,10 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onChangeChecked(){
-    let btnList = document.querySelectorAll('.checkbox-btn');
-    console.log(btnList)
-   btnList.forEach(x => {
-     
-      x.addEventListener('change',function(){
-        //let itemDiv = document.querySelector.
-      });
-    });
+  changeIsChecked(model : any){
+    model.isChecked = !model.isChecked;
   }
-
-  ChangeItemStatus(model : any){
+  changeItemStatus(model : any){
     model.isActive = !model.isActive;
   }
 

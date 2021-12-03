@@ -26,13 +26,18 @@
         <div class="list">
             <input type="text" class="search" placeholder="Recherche des modeles…">
             <div class="list-header">
-                <input type="checkbox" checked="true" disabled name="" id="" class="checkbox-btn">
+                <img src="assets/checkbox-on.svg" alt="" class="button-on checkbox-btn" style="cursor:default;" >
                 <p class="id">ID</p>
                 <p class="name">Nom du modèle</p>
             </div>
             <div class="list-container">
                 <div class="item" *ngFor="let e of modeles" [ngStyle]="{'background-color': !e.isActive ? '#F5F5F5' : (e.isChecked ? '#F1F8F6' : '#fff')  }" >
-                    <input type="checkbox" id="" class="checkbox-btn">
+                    <div>
+                        <img src="assets/checkbox-on.svg" alt="" class="button-on checkbox-btn" *ngIf="e.isActive && e.isChecked" (click)="changeIsChecked(e)">
+                        <img src="assets/checkbox-empty.svg" alt="" class="button-on checkbox-btn" *ngIf="e.isActive && e.isChecked == false" (click)="changeIsChecked(e)">
+                        <img src="assets/checkbox-disabled.svg" alt="" class="button-off checkbox-btn" *ngIf="e.isActive == false && e.isChecked">
+                        <img src="assets/checkbox-empty-disabled.svg" alt="" class="button-off checkbox-btn" *ngIf="e.isActive == false && e.isChecked == false">
+                    </div>
                     <p class="id id-item">{{e.id}}</p>
                     <div class="item-name-date">
                         <p class="name name-item">{{e.title}}</p>
@@ -48,8 +53,8 @@
                         <img src="assets/edit-off.svg" alt="" class="button-off"  *ngIf="e.isActive == false">
                        </div>
                        <div>
-                        <img src="assets/toggle-on.svg" alt="" class="button-on" *ngIf="e.isActive" (click)="ChangeItemStatus(e)">
-                        <img src="assets/toggle-off.svg" alt="" class="button-on" *ngIf="e.isActive == false" (click)="ChangeItemStatus(e)">
+                        <img src="assets/toggle-on.svg" alt="" class="button-on" *ngIf="e.isActive" (click)="changeItemStatus(e)">
+                        <img src="assets/toggle-off.svg" alt="" class="button-on" *ngIf="e.isActive == false" (click)="changeItemStatus(e)">
                        </div>
                        
                    </div>
