@@ -228,7 +228,7 @@ input:focus {
   box-sizing: border-box;
   border-radius: 8px;
   margin-bottom: 17px;
-  position: relative
+  position: relative;
 }
 .name {
   font-style: normal;
@@ -263,24 +263,37 @@ input:focus {
   display: flex;
   align-items: center;
   position: absolute;
-  right:-5px;
+  right: -5px;
 }
 
 .tools > div {
   margin-right: 17px;
-  display:flex;
+  display: flex;
   align-items: center;
   cursor: pointer;
 }
 .checked {
-  background-color: #F1F8F6;
+  background-color: #f1f8f6;
 }
-.disabled{
-  background-color:#F5F5F5;
+.disabled {
+  background-color: #f5f5f5;
 }
-.button-on{
-  cursor:pointer;
+.button-on {
+  cursor: pointer;
 }
-.button-off{
+.button-off {
   cursor: not-allowed;
 }
+.pdf {
+  position: relative;
+}
+.pdf-viewer {
+  width: 622px;
+  right: 16px;
+  top: -231px;
+  display: block;
+  position: absolute;
+  border-radius: 10px;
+  overflow: hidden;
+}
+

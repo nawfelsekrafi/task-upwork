@@ -11,10 +11,10 @@
             <div class="__name"><p>Esther Howard</p></div>
             <div class="__id"><p>856942153746548</p></div>
         </div>
-        <div class="__drop-down-btn"><img src="assets/Arrow-Down.svg" alt="" (click)="toggleMenu()"></div>
+        <div class="__drop-down-btn" (click)="toggleMenu()"><img src="assets/Arrow-Down.svg" alt="" ></div>
     </div>
 </div>
-<div class="__logout-btn">
+<div class="__logout-btn" *ngIf="deconnexion">
     <div class="btn-container">
         <img class="on-pic" src="assets/on.svg" alt="">
         <p class="__logout">Déconnexion</p>

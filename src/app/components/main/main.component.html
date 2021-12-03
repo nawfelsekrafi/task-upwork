@@ -24,14 +24,14 @@
     </div>
     <div class="main-content">
         <div class="list">
-            <input type="text" class="search" placeholder="Recherche des modeles…">
+            <input type="text" (keyup)="search()" [(ngModel)]="searchValue" class="search"  placeholder="Recherche des modeles…">
             <div class="list-header">
                 <img src="assets/checkbox-on.svg" alt="" class="button-on checkbox-btn" style="cursor:default;" >
                 <p class="id">ID</p>
                 <p class="name">Nom du modèle</p>
             </div>
             <div class="list-container">
-                <div class="item" *ngFor="let e of modeles" [ngStyle]="{'background-color': !e.isActive ? '#F5F5F5' : (e.isChecked ? '#F1F8F6' : '#fff')  }" >
+                <div class="item" *ngFor="let e of filtredModeles" [ngStyle]="{'background-color': !e.isActive ? '#F5F5F5' : (e.isChecked ? '#F1F8F6' : '#fff')  }" >
                     <div>
                         <img src="assets/checkbox-on.svg" alt="" class="button-on checkbox-btn" *ngIf="e.isActive && e.isChecked" (click)="changeIsChecked(e)">
                         <img src="assets/checkbox-empty.svg" alt="" class="button-on checkbox-btn" *ngIf="e.isActive && e.isChecked == false" (click)="changeIsChecked(e)">
@@ -45,7 +45,7 @@
                     </div>
                    <div class="tools" >
                        <div>
-                        <img src="assets/eye-on.svg" alt="" class="button-on" *ngIf="e.isActive">
+                        <img src="assets/eye-on.svg" alt="" class="button-on" *ngIf="e.isActive" (click)="viewFile(e)">
                         <img src="assets/eye-off.svg" alt="" class="button-off"  *ngIf="e.isActive == false">
                        </div>
                        <div>
@@ -62,8 +62,16 @@
                 </div>
             </div>
         </div>
-        <div class="pdf-viwer">
-            need to be complete
-        </div>
+        <div class="pdf">
+            <ngx-extended-pdf-viewer class="pdf-viewer" [src]="ShowedFile" [(page)]="page" height="485px" width="150px"
+            [theme]="'dark'"
+            [useBrowserLocale]="true"
+            [textLayer]="true" 
+            [showHandToolButton]="true"
+            [zoom]="'31%'"
+            > 
+            
+            </ngx-extended-pdf-viewer>
     </div>
+</div>
 </div>

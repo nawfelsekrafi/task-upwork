@@ -71,8 +71,8 @@ svg {
   fill: #32bc9b;
 }
 .titleIsActive .formation path {
-  fill:none ;
-  stroke:#32bc9b  ;
+  fill: none;
+  stroke: #32bc9b;
 }
 .titleIsFocused {
   width: 45px !important;
@@ -83,10 +83,9 @@ svg {
   fill: #32bc9b;
 }
 .titleIsFocused .formation path {
-  fill:none ;
-  stroke:#32bc9b  ;
+  fill: none;
+  stroke: #32bc9b;
 }
 .titleIsFocused > .title {
   color: #32bc9b;
 }
-
