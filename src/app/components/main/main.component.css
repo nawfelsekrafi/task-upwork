@@ -1,4 +1,3 @@
-
 .main-header {
   background-color: #fff;
   display: flex;
@@ -150,6 +149,7 @@
   width: 103%;
   height: 390px;
   overflow-y: scroll;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 /* width */
@@ -267,10 +267,13 @@ input [type="chechbox"]:checked .list-header{
   display: flex;
   align-items: center;
   position: absolute;
-  right: -5px;
+  right:-5px;
 }
-.tools > img {
+
+.tools > div {
   margin-right: 17px;
+  display:flex;
+  align-items: center;
   cursor: pointer;
 }
 .checked {
@@ -278,4 +281,10 @@ input [type="chechbox"]:checked .list-header{
 }
 .disabled{
   background-color:#F5F5F5;
+}
+.button-on{
+  cursor:pointer;
+}
+.button-off{
+  cursor: not-allowed;
 }

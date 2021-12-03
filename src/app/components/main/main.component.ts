@@ -7,8 +7,7 @@ import { Component,  OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
-  
+  consructor() { }
   modeles: any[] = [
     { 
       isActive: true,
@@ -73,7 +72,6 @@ export class MainComponent implements OnInit {
       title: 'Pré-évaluation 9',
       date: '31/07/2021 a 21:34'
     }
-    
   ] ;
   ngOnInit(): void {
   }
@@ -87,6 +85,10 @@ export class MainComponent implements OnInit {
         //let itemDiv = document.querySelector.
       });
     });
+  }
+
+  ChangeItemStatus(model : any){
+    model.isActive = !model.isActive;
   }
 
 }

@@ -31,7 +31,7 @@
                 <p class="name">Nom du modèle</p>
             </div>
             <div class="list-container">
-                <div class="item" *ngFor="let e of modeles; let last = last" >
+                <div class="item" *ngFor="let e of modeles" [ngStyle]="{'background-color': !e.isActive ? '#F5F5F5' : (e.isChecked ? '#F1F8F6' : '#fff')  }" >
                     <input type="checkbox" id="" class="checkbox-btn">
                     <p class="id id-item">{{e.id}}</p>
                     <div class="item-name-date">
@@ -39,11 +39,21 @@
                         <p class="date">{{e.date}}</p>
                     </div>
                    <div class="tools" >
-                       <img src="assets/eye.svg" alt="" class="eye">
-                       <img src="assets/edit.svg" alt="" class="edit">
-                       <img src="assets/toggle.svg" alt="" class="button-on-off">
+                       <div>
+                        <img src="assets/eye-on.svg" alt="" class="button-on" *ngIf="e.isActive">
+                        <img src="assets/eye-off.svg" alt="" class="button-off"  *ngIf="e.isActive == false">
+                       </div>
+                       <div>
+                        <img src="assets/edit-on.svg" alt="" class="button-on" *ngIf="e.isActive">
+                        <img src="assets/edit-off.svg" alt="" class="button-off"  *ngIf="e.isActive == false">
+                       </div>
+                       <div>
+                        <img src="assets/toggle-on.svg" alt="" class="button-on" *ngIf="e.isActive" (click)="ChangeItemStatus(e)">
+                        <img src="assets/toggle-off.svg" alt="" class="button-on" *ngIf="e.isActive == false" (click)="ChangeItemStatus(e)">
+                       </div>
+                       
                    </div>
-                   <span *ngIf="last">{{onChangeChecked()}}</span>
+                   
                 </div>
             </div>
         </div>
